@@ -1,0 +1,77 @@
+.__dd {
+    font-family: 'Intro Book';
+    color: #21293E;
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    img,
+    svg {
+        vertical-align: middle;
+    }
+
+    img {
+        max-width: 100%;
+        width: 100%;
+    }
+    .slick-slide {
+        outline: none;
+    }
+    .mb60 {
+        margin-bottom: 60px !important;
+    }
+    .is--animate-block {
+        opacity: 0;
+        transition: .25s all ease;
+        &.is--finish {
+            opacity: 1;
+        }
+    }
+    .is--animate-graph {
+        &.is--anim {
+            animation: graphAnim 3s linear alternate;
+            animation-iteration-count: 1;
+            stroke-dashoffset: 1000;
+            stroke-dasharray: 1000;
+            animation-fill-mode: both;
+        }
+    }
+    .is--animate-graph-circle {
+        &.is--anim {
+            animation: graphAnimCircles 1s linear alternate;
+            animation-iteration-count: 1;
+            animation-fill-mode: both;
+            animation-delay: 2s;
+        }
+    }
+}
+
+@keyframes graphAnim {
+    from {
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes graphAnimCircles {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
