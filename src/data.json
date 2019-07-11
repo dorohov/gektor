@@ -1,3 +1,13 @@
 {
-    "sitename": "Gektor"
+    "sitename": "Gektor",
+    "lang": "ru",
+    "phone": "+7 (4862) 36-01-75",
+    "phone_link": "tel:84862360175",
+    "pages": {
+        "index": "index.html",
+        "catalog": "catalog.html",
+        "delivery": "delivery.html",
+        "contacts": "contacts.html",
+        "basket": "basket.html"
+    }
 }

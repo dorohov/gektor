@@ -1,0 +1,41 @@
+input {
+    outline: none;
+    &[type="text"],
+    &[type="password"],
+    &[type="email"] {
+        &.is--default {
+            border: 1px solid #BBD3E3;
+            font-weight: 300;
+            font-size: 14px;
+            color: #000;
+            position: relative;
+            transition: .25s all ease;
+            &::placeholder {
+                color: #000;
+            }
+            &:focus {
+                border-color: $c-primary;
+            }
+        }
+        &.is--search {
+            padding: 20px 20px 20px 60px;
+            background: transparent;
+            max-width: 240px;
+            width: 100%;
+            min-width: 240px;
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    input {
+        &[type="text"],
+        &[type="password"],
+        &[type="email"] {
+            &.is--search {
+                max-width: 200px;
+                min-width: 200px;
+            }
+        }
+    }
+}

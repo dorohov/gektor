@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Главная — Gektor</title>
+    <link rel="stylesheet" href="dist/css/style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar__inner container">
+            <div class="navbar__logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Gektor">
+                </a>
+            </div>
+            <div class="navbar__menu">
+                <ul>
+                    <li class="is--active"><a href="index.html"><span>Главная</span></a></li>
+                    <li><a href="catalog.html"><span>Каталог</span></a></li>
+                    <li><a href="delivery.html"><span>Доставка и оплата</span></a></li>
+                    <li><a href="contacts.html"><span>Контакты</span></a></li>
+                </ul>
+            </div>
+            <div class="navbar__phone">
+                <a href="tel:84862360175" class="navbar__phone__inner">
+                    <svg class="svg-phone-dims svg is--phone">
+                        <use xlink:href="img/svg/sprites.svg#phone"></use>
+                    </svg>
+                    <span>+7 (4862) 36-01-75</span>
+                </a>
+            </div>
+            <div class="navbar__search">
+                <form action="#" class="navbar__search__inner">
+                    <input type="text" name="search" id="search" class="is--search is--default" placeholder="Поиск">
+                </form>
+            </div>
+            <div class="navbar__basket">
+                <a href="basket.html">
+                    <svg class="svg-cart-dims svg is--cart">
+                        <use xlink:href="img/svg/sprites.svg#cart"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="navbar__mobile">
+                <button class="hamburger hamburger--collapse" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+
+    </main>
+    <div class="footer"></div>
+    <div id="overlay"></div>
+    <script src="dist/js/jquery-3.3.1.min.js"></script>
+</body>
+
+</html>

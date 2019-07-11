@@ -1,0 +1,40 @@
+<header class="navbar">
+    <div class="navbar__inner container">
+        <div class="navbar__logo">
+            <a href="@@pages.index">
+                <img src="img/logo.png" alt="@@sitename">
+            </a>
+        </div>
+        <div class="navbar__menu">
+            <ul>
+                <li class="is--active"><a href="@@pages.index"><span>Главная</span></a></li>
+                <li><a href="@@pages.catalog"><span>Каталог</span></a></li>
+                <li><a href="@@pages.delivery"><span>Доставка и оплата</span></a></li>
+                <li><a href="@@pages.contacts"><span>Контакты</span></a></li>
+            </ul>
+        </div>
+        <div class="navbar__phone">
+            <a href="@@phone_link" class="navbar__phone__inner">
+                @@include('component.svg.html', {"name": "phone"})
+                <span>@@phone</span>
+            </a>
+        </div>
+        <div class="navbar__search">
+            <form action="#" class="navbar__search__inner">
+                <input type="text" name="search" id="search" class="is--search is--default" placeholder="Поиск">
+            </form>
+        </div>
+        <div class="navbar__basket">
+            <a href="@@pages.basket">
+                @@include('component.svg.html', {"name": "cart"})
+            </a>
+        </div>
+        <div class="navbar__mobile">
+            <button class="hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,171 @@
+.navbar {
+    border-bottom: 1px solid rgba(#004D85, .18);
+    height: 100px;
+    background: #fff;
+    &__inner {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    &__logo {
+        max-width: 121px;
+        width: 100%;
+        margin-right: 55px;
+    }
+    &__menu {
+        height: 100%;
+        ul {
+            display: flex;
+            height: 100%;
+            li {
+                height: 100%;
+                a {
+                    display: block;
+                    height: 100%;
+                    padding-left: 22px;
+                    padding-right: 22px;
+                    span {
+                        display: flex;
+                        height: 100%;
+                        align-items: center;
+                        position: relative;
+                        color: #000000;
+                        white-space: nowrap;
+                        &::after {
+                            content: '';
+                            background: $c-primary;
+                            height: 1px;
+                            width: 100%;
+                            position: absolute;
+                            bottom: -1px;
+                            left: 0;
+                            transition: .25s all ease;
+                            opacity: 0;
+                        }
+                    }
+                }
+                &:hover,
+                &.is--active {
+                    span {
+                        &::after {
+                            opacity: 1;
+                            height: 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__phone {
+        height: 100%;
+        margin-left: auto;
+        a {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            white-space: nowrap;
+            span {
+                font-weight: 600;
+                color: #000;
+                transition: .25s all ease;
+                display: inline-block;
+                margin-left: 8px;
+                padding-bottom: 5px;
+            }
+            svg {
+                fill: $c-primary;
+            }
+            &:hover {
+                span {
+                    color: $c-primary;
+                }
+            }
+        }
+    }
+    &__search {
+        margin-left: 65px;
+        &__inner {
+            position: relative;
+            &::after {
+                content: url(../../img/search.svg);
+                position: absolute;
+                left: 22px;
+                top: 50%;
+                margin-top: -10px;
+            }
+        }
+    }
+    &__basket {
+        margin-left: 45px;
+        a {
+            display: flex;
+            width: 45px;
+            height: 45px;
+            background: $c-primary;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+            svg {
+                fill: #fff;
+            }
+        }
+    }
+    &__mobile {
+        display: none;
+        margin-left: auto;
+        button {
+            outline: none !important;
+            margin-right: -15px;
+        }
+        .hamburger {
+            &-inner {
+                background-color: $c-primary !important;
+                height: 2px !important;
+                &::after,
+                &::before {
+                    background-color: $c-primary !important;
+                    height: 2px !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .navbar {
+        &__logo {
+            margin-right: 25px;
+        }
+        &__menu {
+            ul {
+                li {
+                    a {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                }
+            }
+        }
+        &__search {
+            margin-left: 35px;
+        }
+        &__basket {
+            margin-left: 25px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .navbar {
+        height: 70px;
+        &__menu,
+        &__phone,
+        &__search,
+        &__basket {
+            display: none;
+        }
+        &__mobile {
+            display: block;
+        }
+    }
+}
