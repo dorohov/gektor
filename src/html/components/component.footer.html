@@ -1,3 +1,27 @@
-<div class="footer"></div>
+<div class="footer">
+    <div class="footer__inner container">
+        <div class="footer__logo">
+            <a href="@@pages.index">
+                <img src="img/logo_inv.png" alt="@@sitename">
+            </a>
+        </div>
+        <div class="footer__content">
+            <div class="footer__content__block is--phone">
+                <a href="@@phone_link">@@phone</a>
+            </div>
+            <div class="footer__content__block is--email">
+                <a href="mailto:@@email">@@email</a>
+            </div>
+            <div class="footer__content__block is--adres">
+                @@adres
+            </div>
+        </div>
+        <div class="footer__dorohov">
+            <a href="https://dorohovdesign.ru/" target="_blank">
+                @@include('component.svg.html', {"name": "dorohov"})
+            </a>
+        </div>
+    </div>
+</div>
 <div id="overlay"></div>
 @@include('component.scripts.html')
