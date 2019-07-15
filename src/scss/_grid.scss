@@ -4,3 +4,63 @@
     padding-right: 30px;
     margin: 0 auto;
 }
+
+.button {
+    display: inline-block;
+    outline: none;
+    border: none;
+    background: $c-primary;
+    cursor: pointer;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 20px 70px;
+    white-space: nowrap;
+    &__text {
+        height: 14px;
+        overflow: hidden;
+        font-weight: 600;
+        letter-spacing: 0.215em;
+        span {
+            display: block;
+            transform: matrix(1, 0, 0, 1, 0, 0);
+            transition: .25s all ease;
+        }
+    }
+    &:hover {
+        .button {
+            &__text {
+                span {
+                    transform: matrix(1, 0, 0, 1, 0, -14);
+                }
+            }
+        }
+    }
+}
+
+.heading {
+    margin-bottom: 60px;
+    &__text {
+        font-weight: bold;
+        font-size: 48px;
+    }
+    &__sub {
+        padding-top: 30px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .button {
+        padding: 16px 40px;
+    }
+    .heading {
+        margin-bottom: 30px;
+        &__text {
+            font-size: 24px;
+        }
+        &__sub {
+            font-size: 16px;
+        }
+    }
+}

@@ -3,6 +3,8 @@
     "lang": "ru",
     "phone": "+7 (4862) 36-01-75",
     "phone_link": "tel:84862360175",
+    "email": "ooo_td_aris@mail.ru",
+    "adres": "ул. Рощинская д.41 пом.5",
     "pages": {
         "index": "index.html",
         "catalog": "catalog.html",

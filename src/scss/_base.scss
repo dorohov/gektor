@@ -1,6 +1,26 @@
 body {
     background: #F8F8FB;
     font-family: 'IBM Plex Mono';
+    &.is--open-menu {
+        .navbar {
+            &__mobile {
+                &__container {
+                    transform: none;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &.is--filters {
+        .catalog-home__aside {
+            transform: none;
+        }
+    }
+    &.is--overlay {
+        #overlay {
+            display: block;
+        }
+    }
 }
 
 *,
@@ -37,4 +57,12 @@ img {
     height: 100vh;
     background: rgba(#000, .5);
     cursor: pointer;
+    display: none;
+}
+
+a.link {
+    color: #000;
+    &:hover {
+        color: $c-primary;
+    }
 }

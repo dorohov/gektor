@@ -1,0 +1,29 @@
+<div class="catalog-home">
+    <div class="catalog-home__inner container">
+        <div class="catalog-home__title">
+            <div class="catalog-home__title__text">
+                <div class="heading">
+                    <div class="heading__text">Каталог продукции</div>
+                </div>
+            </div>
+            @@if(getall == 'true') {
+                <div class="catalog-home__title__all is--all">
+                    <a href="@@pages.catalog" class="catalog-home__title__all__text">
+                        <span>Увидеть все</span>
+                        <span>Увидеть все</span>
+                    </a>
+                </div>
+                <div class="catalog-home__title__all is--filters">
+                    <a class="catalog-home__title__all__text">
+                        <span>Сортировать</span>
+                        <span>Сортировать</span>
+                    </a>
+                </div>
+            }
+        </div>
+        <div class="catalog-home__container">
+            @@include('catalog.home.aside.html')
+            @@include('catalog.home.wrap.html')
+        </div>
+    </div>
+</div>

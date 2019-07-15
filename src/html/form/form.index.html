@@ -1,0 +1,42 @@
+<div class="form">
+    <form class="form__inner container">
+        <div class="heading">
+            <div class="heading__text">
+                Задайте интересующий <br> Вас вопрос
+            </div>
+            <div class="heading__sub">
+                В ближайшее время с Вами свяжется специалист
+            </div>
+        </div>
+        <div class="form__wrap">
+            <div class="form__block">
+                <input type="text" class="is--default is--icon-right is--user" id="name" name="name" placeholder="Ваше имя">
+                <label for="name">@@include('../components/component.svg.html', {"name": "field_user"})</label>
+            </div>
+            <div class="form__block">
+                <input type="text" class="is--default is--icon-right is--phone" id="phone" name="phone" placeholder="Ваш телефон">
+                <label for="phone">@@include('../components/component.svg.html', {"name": "field_phone"})</label>
+            </div>
+            <div class="form__block">
+                <input type="text" class="is--default is--icon-right is--quest" id="quest" name="quest" placeholder="Ваш вопрос">
+                <label for="quest">@@include('../components/component.svg.html', {"name": "field_quest"})</label>
+            </div>
+            <div class="form__block">
+                @@include('../components/component.button.html', {
+                    "text": "Отправить",
+                    "type": "submit",
+                    "style": "default"
+                })
+            </div>
+        </div>
+        <div class="form__ruls">
+            <div class="checkbox">
+                <input type="checkbox" name="ruls" id="ruls">
+                <label for="ruls"><span></span></label>
+            </div>
+            <label for="ruls">
+                Нажимая на кнопку, Вы даёте согласие на <a href="#" class="link">обработку персональных данных и соглашаетесь c политикой конфиденциальности</a>
+            </label>
+        </div>
+    </form>
+</div>

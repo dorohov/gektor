@@ -27,6 +27,7 @@
         <div class="navbar__basket">
             <a href="@@pages.basket">
                 @@include('component.svg.html', {"name": "cart"})
+                <span class="is--num">13</span>
             </a>
         </div>
         <div class="navbar__mobile">
@@ -38,3 +39,31 @@
         </div>
     </div>
 </header>
+<div class="navbar__mobile__container">
+    <div class="navbar__mobile__container__inner">
+        <div class="navbar__mobile__container__menu">
+            <ul>
+                <li class="is--active"><a href="@@pages.index"><span>Главная</span></a></li>
+                <li><a href="@@pages.catalog"><span>Каталог</span></a></li>
+                <li><a href="@@pages.delivery"><span>Доставка и оплата</span></a></li>
+                <li><a href="@@pages.contacts"><span>Контакты</span></a></li>
+                <li><a href="@@pages.contacts"><span>Корзина</span></a></li>
+            </ul>
+        </div>
+        <div class="navbar__mobile__container__search">
+            <div class="navbar__search">
+                <form action="#" class="navbar__search__inner">
+                    <input type="text" name="search" id="search_mobile" class="is--search is--default" placeholder="Поиск">
+                </form>
+            </div>
+        </div>
+        <div class="navbar__mobile__container__phone">
+            <div class="navbar__phone">
+                <a href="@@phone_link" class="navbar__phone__inner">
+                    @@include('component.svg.html', {"name": "phone"})
+                    <span>@@phone</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

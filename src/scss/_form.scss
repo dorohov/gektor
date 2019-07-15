@@ -23,7 +23,85 @@ input {
             max-width: 240px;
             width: 100%;
             min-width: 240px;
+            background: #fff;
         }
+        &.is--icon-right {
+            padding: 25px 60px 25px 35px;
+            font-weight: 200;
+            width: 100%;
+            &:focus {
+                & + label {
+                    svg {
+                        fill: $c-primary;
+                    }
+                }
+            }
+            & + label {
+                position: absolute;
+                right: 40px;
+                top: 50%;
+                margin-top: -14px;
+                svg {
+                    fill: #BBD3E3;
+                    transition: .25s all ease;
+                }
+            }
+        }
+    }
+}
+
+.checkbox {
+    display: inline-block;
+    input {
+        display: none;
+        &:checked + label {
+            span {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    }
+    label {
+        display: flex;
+        width: 19px;
+        height: 19px;
+        border: 1px solid #BBD3E3;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        span {
+            display: block;
+            background: #BBD3E3;
+            width: 11px;
+            height: 11px;
+            opacity: 0;
+            transform: scale(1.8) rotate(90deg);
+            transition: .25s all ease;
+        }
+    }
+}
+
+.form {
+    padding-top: 130px;
+    padding-bottom: 180px;
+    background: #fff;
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px 40px -15px;
+    }
+    &__block {
+        max-width: 25%;
+        width: 100%;
+        padding: 0 15px;
+        position: relative;
+        .button {
+            height: 100%;
+        }
+    }
+    &__ruls {
+        font-weight: 300;
+        font-size: 14px;
     }
 }
 
@@ -36,6 +114,33 @@ input {
                 max-width: 200px;
                 min-width: 200px;
             }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .form {
+        &__wrap {
+            margin-bottom: 0;
+        }
+        &__block {
+            max-width: 50%;
+            margin-bottom: 30px;
+            button {
+                display: block;
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .form {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        &__block {
+            max-width: 100%;
         }
     }
 }
