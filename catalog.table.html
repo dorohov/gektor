@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Каталог — Gektor</title>
+    <link rel="stylesheet" href="dist/css/style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar__inner container">
+            <div class="navbar__left">
+                <div class="navbar__logo">
+                    <a href="index.html">
+                        <img src="img/logo.svg" alt="Gektor">
+                    </a>
+                </div>
+                <div class="navbar__menu">
+                    <ul>
+                        <li><a href="catalog.html"><span>Каталог</span></a></li>
+                        <li><a href="delivery.html"><span>Доставка и оплата</span></a></li>
+                        <li><a href="contacts.html"><span>Контакты</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar__right">
+                <div class="navbar__email is--so_cls">
+                    <a href="mailto:ooo_td_aris@mail.ru" class="navbar__email__inner">
+                        <svg class="svg-mail-dims svg is--mail">
+                            <use xlink:href="img/svg/sprites.svg#mail"></use>
+                        </svg>
+                        <span>ooo_td_aris@mail.ru</span>
+                    </a>
+                </div>
+                <div class="navbar__phone is--so_cls">
+                    <a href="tel:84862360175" class="navbar__phone__inner">
+                        <svg class="svg-phone-dims svg is--phone">
+                            <use xlink:href="img/svg/sprites.svg#phone"></use>
+                        </svg>
+                        <span>+7 (4862) 36-01-75</span>
+                    </a>
+                </div>
+                <div class="navbar__phone is--so_cls">
+                    <a href="tel:84862360175" class="navbar__phone__inner">
+                        <svg class="svg-phone-dims svg is--phone">
+                            <use xlink:href="img/svg/sprites.svg#phone"></use>
+                        </svg>
+                        <span>+7 (4862) 36-01-75</span>
+                    </a>
+                </div>
+                <div class="navbar__basket is--so_cls">
+                    <a href="basket.html">
+                        <svg class="svg-cart-dims svg is--cart">
+                            <use xlink:href="img/svg/sprites.svg#cart"></use>
+                        </svg>
+                        <span class="is--num">13</span>
+                    </a>
+                </div>
+                <div class="navbar__search is--so_cls">
+                    <span class="is--nlink">
+                        <svg class="svg-search-dims svg is--search">
+                            <use xlink:href="img/svg/sprites.svg#search"></use>
+                        </svg>
+                    </span>
+                </div>
+                <div class="navbar__searchbar">
+                    <input type="text" name="nsearch" id="nsearch">
+                    <button type="submit">
+                        <svg class="svg-search-dims svg is--search">
+                            <use xlink:href="img/svg/sprites.svg#search"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="navbar__mobile">
+                <button class="hamburger hamburger--collapse" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="navbar__mobile__container">
+        <div class="navbar__mobile__container__inner">
+            <div class="navbar__mobile__container__menu">
+                <ul>
+                    <li class="is--active"><a href="index.html"><span>Главная</span></a></li>
+                    <li><a href="catalog.html"><span>Каталог</span></a></li>
+                    <li><a href="delivery.html"><span>Доставка и оплата</span></a></li>
+                    <li><a href="contacts.html"><span>Контакты</span></a></li>
+                    <li><a href="contacts.html"><span>Корзина</span></a></li>
+                </ul>
+            </div>
+            <div class="navbar__mobile__container__search">
+                <div class="navbar__search">
+                    <form action="#" class="navbar__search__inner">
+                        <input type="text" name="search" id="search_mobile" class="is--search is--default" placeholder="Поиск">
+                    </form>
+                </div>
+            </div>
+            <div class="navbar__mobile__container__phone">
+                <div class="navbar__phone">
+                    <a href="tel:84862360175" class="navbar__phone__inner">
+                        <svg class="svg-phone-dims svg is--phone">
+                            <use xlink:href="img/svg/sprites.svg#phone"></use>
+                        </svg>
+                        <span>+7 (4862) 36-01-75</span>
+                    </a>
+                </div>
+                <div class="navbar__phone">
+                    <a href="tel:84862360175" class="navbar__phone__inner">
+                        <svg class="svg-phone-dims svg is--phone">
+                            <use xlink:href="img/svg/sprites.svg#phone"></use>
+                        </svg>
+                        <span>+7 (4862) 36-01-75</span>
+                    </a>
+                </div>
+                <div class="navbar__email is--so_cls">
+                    <a href="mailto:ooo_td_aris@mail.ru" class="navbar__email__inner">
+                        <svg class="svg-mail-dims svg is--mail">
+                            <use xlink:href="img/svg/sprites.svg#mail"></use>
+                        </svg>
+                        <span>ooo_td_aris@mail.ru</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="catalog-banner">
+            <div class="catalog-banner__inner container">
+                <div class="catalog-banner__top">
+                    <div class="catalog-banner__top__left">
+                        <div class="breadcrumbs">
+                            <ul>
+
+                                <li><a href="index.html">Главная</a></li>
+
+                                <li>Каталог</li>
+                            </ul>
+                        </div>
+                        <div class="heading">
+                            <div class="heading__text">Каталог продукции</div>
+                        </div>
+                    </div>
+                    <div class="catalog-banner__top__right">
+                        <form class="catalog-banner__top__search">
+                            <input type="text" placeholder="Поиск по магазину">
+                            <button type="submit">
+                                <svg class="svg-search-dims svg is--search">
+                                    <use xlink:href="img/svg/sprites.svg#search"></use>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="catalog-banner__filters">
+                    <div class="catalog-banner__filters__heading">Выберите необходимые параметры</div>
+                    <div class="catalog-banner__filters__list">
+                        <div class="catalog-banner__filters__block" data-min="1" data-max="530">
+                            <div class="catalog-banner__filters__block__inner">
+                                <div class="catalog-banner__filters__block__input">
+                                    <div class="catalog-banner__filters__block__input__title">Диаметр, мм</div>
+                                    <div class="catalog-banner__filters__block__input__field">
+                                        <input type="number" placeholder="от 1 до 530" min="1" max="530" data-id="1">
+                                    </div>
+                                </div>
+                                <div class="catalog-banner__filters__block__slider">
+                                    <div class="slider" data-id="1"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-banner__filters__block" data-min="1" data-max="530">
+                            <div class="catalog-banner__filters__block__inner">
+                                <div class="catalog-banner__filters__block__input">
+                                    <div class="catalog-banner__filters__block__input__title">Внутренний диаметр, мм</div>
+                                    <div class="catalog-banner__filters__block__input__field">
+                                        <input type="number" placeholder="от 1 до 530" min="1" max="530" data-id="2">
+                                    </div>
+                                </div>
+                                <div class="catalog-banner__filters__block__slider">
+                                    <div class="slider" data-id="2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-banner__filters__block" data-min="2" data-max="580">
+                            <div class="catalog-banner__filters__block__inner">
+                                <div class="catalog-banner__filters__block__input">
+                                    <div class="catalog-banner__filters__block__input__title">Наружный диаметр, мм</div>
+                                    <div class="catalog-banner__filters__block__input__field">
+                                        <input type="number" placeholder="от 2 до 580" min="2" max="580" data-id="3">
+                                    </div>
+                                </div>
+                                <div class="catalog-banner__filters__block__slider">
+                                    <div class="slider" data-id="3"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-banner__filters__block" data-min="2" data-max="580">
+                            <div class="catalog-banner__filters__block__inner">
+                                <div class="catalog-banner__filters__block__input">
+                                    <div class="catalog-banner__filters__block__input__title">Номер</div>
+                                    <div class="catalog-banner__filters__block__input__field">
+                                        <input type="number" placeholder="от 2 до 580" min="2" max="580" data-id="4">
+                                    </div>
+                                </div>
+                                <div class="catalog-banner__filters__block__slider">
+                                    <div class="slider" data-id="4"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="footer">
+        <div class="footer__inner container">
+            <div class="footer__logo">
+                <a href="index.html">
+                    <img src="img/logo_inv.svg" alt="Gektor">
+                </a>
+            </div>
+            <div class="footer__content">
+                <div class="footer__content__block is--phone">
+                    <a href="tel:84862360175">+7 (4862) 36-01-75</a>
+                </div>
+                <div class="footer__content__block is--email">
+                    <a href="mailto:ooo_td_aris@mail.ru">ooo_td_aris@mail.ru</a>
+                </div>
+                <div class="footer__content__block is--adres">
+                    ул. Рощинская д.41 пом.5
+                </div>
+            </div>
+            <div class="footer__dorohov">
+                <a href="https://dorohovdesign.ru/" target="_blank">
+                    <svg class="svg-dorohov-dims svg is--dorohov">
+                        <use xlink:href="img/svg/sprites.svg#dorohov"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <script src="dist/js/jquery-3.3.1.min.js"></script>
+    <script src="dist/js/jquery-ui.min.js"></script>
+    <script src="dist/js/main.js"></script>
+</body>
+
+</html>

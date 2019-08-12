@@ -8,6 +8,7 @@
     "pages": {
         "index": "index.html",
         "catalog": "catalog.html",
+        "catalog.table": "catalog.table.html",
         "delivery": "delivery.html",
         "contacts": "contacts.html",
         "basket": "basket.html"

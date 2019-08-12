@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Главная — Gektor</title>
+    <title>Каталог — Gektor</title>
     <link rel="stylesheet" href="dist/css/style.css">
 </head>
 
@@ -131,44 +131,23 @@
         </div>
     </div>
     <main>
-        <div class="banner">
-            <div class="banner__inner container">
-                <div class="banner__title">Магазин «Подшипник» <br> на Рощинской</div>
-                <div class="banner__sub">Продажа подшипников, РТИ, смазок</div>
-                <div class="banner__link">
-
-                    <a href="catalog.html" class="button">
-
-
-
-                        <div class="button__text is--default">
-                            <span class="button__text is--one">В каталог</span>
-                            <span class="button__text is--one">В каталог</span>
-                        </div>
-
-                    </a>
-
-
-
-
-                </div>
-            </div>
-        </div>
-        <div class="catalog-home is--index">
+        <div class="catalog-home is--default">
             <div class="catalog-home__inner container">
+
+                <div class="breadcrumbs">
+                    <ul>
+
+                        <li><a href="index.html">Главная</a></li>
+
+                        <li>Каталог</li>
+                    </ul>
+                </div>
 
                 <div class="catalog-home__title">
                     <div class="catalog-home__title__text">
                         <div class="heading">
                             <div class="heading__text">Каталог продукции</div>
                         </div>
-                    </div>
-
-                    <div class="catalog-home__title__all is--all">
-                        <a href="catalog.html" class="catalog-home__title__all__text">
-                            <span>Увидеть все</span>
-                            <span>Увидеть все</span>
-                        </a>
                     </div>
 
                     <div class="catalog-home__title__all is--filters">
@@ -329,67 +308,24 @@
                             </div>
                         </div>
 
+                        <div class="pagination">
+                            <div class="pagination__inner">
+                                <ul>
+                                    <li><a href="#" class="is--num">1</a></li>
+                                    <li><span class="is--num is--current">2</span></li>
+                                    <li><a href="#" class="is--num">3</a></li>
+                                    <li><span class="is--num">...</span></li>
+                                    <li><a href="#" class="is--num">15</a></li>
+                                    <li><a href="#" class="is--next">Следующая <svg class="svg-paginate_arrow-dims svg is--paginate_arrow">
+                                                <use xlink:href="img/svg/sprites.svg#paginate_arrow"></use>
+                                            </svg></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="form">
-            <form class="form__inner container">
-                <div class="heading">
-                    <div class="heading__text">
-                        Задайте интересующий <br> Вас вопрос
-                    </div>
-                    <div class="heading__sub">
-                        В ближайшее время с Вами свяжется специалист
-                    </div>
-                </div>
-                <div class="form__wrap">
-                    <div class="form__block">
-                        <input type="text" class="is--default is--icon-right is--user" id="name" name="name" placeholder="Ваше имя">
-                        <label for="name"><svg class="svg-field_user-dims svg is--field_user">
-                                <use xlink:href="img/svg/sprites.svg#field_user"></use>
-                            </svg></label>
-                    </div>
-                    <div class="form__block">
-                        <input type="text" class="is--default is--icon-right is--phone" id="phone" name="phone" placeholder="Ваш телефон">
-                        <label for="phone"><svg class="svg-field_phone-dims svg is--field_phone">
-                                <use xlink:href="img/svg/sprites.svg#field_phone"></use>
-                            </svg></label>
-                    </div>
-                    <div class="form__block">
-                        <input type="text" class="is--default is--icon-right is--quest" id="quest" name="quest" placeholder="Ваш вопрос">
-                        <label for="quest"><svg class="svg-field_quest-dims svg is--field_quest">
-                                <use xlink:href="img/svg/sprites.svg#field_quest"></use>
-                            </svg></label>
-                    </div>
-                    <div class="form__block">
-
-
-
-                        <button class="button" type="submit">
-
-                            <div class="button__text is--default">
-                                <span class="button__text is--one">Отправить</span>
-                                <span class="button__text is--one">Отправить</span>
-                            </div>
-
-
-
-
-                        </button>
-
-                    </div>
-                </div>
-                <div class="form__ruls">
-                    <div class="checkbox">
-                        <input type="checkbox" name="ruls" id="ruls">
-                        <label for="ruls"><span></span></label>
-                    </div>
-                    <label for="ruls">
-                        Нажимая на кнопку, Вы даёте согласие на <a href="#" class="link">обработку персональных данных и соглашаетесь c политикой конфиденциальности</a>
-                    </label>
-                </div>
-            </form>
         </div>
     </main>
     <div class="footer">

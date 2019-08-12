@@ -1,5 +1,16 @@
-<div class="catalog-home">
+<div class="catalog-home is--@@type">
     <div class="catalog-home__inner container">
+        @@if(bread == 'true') {
+           @@include('../simple/simple.breadcrumbs.html', {
+                "list": [
+                    {
+                        "title": "Главная",
+                        "url": "@@pages.index"
+                    }
+                ],
+                "current": "Каталог"
+            })
+        }
         <div class="catalog-home__title">
             <div class="catalog-home__title__text">
                 <div class="heading">
@@ -13,17 +24,19 @@
                         <span>Увидеть все</span>
                     </a>
                 </div>
-                <div class="catalog-home__title__all is--filters">
-                    <a class="catalog-home__title__all__text">
-                        <span>Сортировать</span>
-                        <span>Сортировать</span>
-                    </a>
-                </div>
             }
+            <div class="catalog-home__title__all is--filters">
+                <a class="catalog-home__title__all__text">
+                    <span>Сортировать</span>
+                    <span>Сортировать</span>
+                </a>
+            </div>
         </div>
         <div class="catalog-home__container">
             @@include('catalog.home.aside.html')
-            @@include('catalog.home.wrap.html')
+            @@include('catalog.home.wrap.html', {
+                "paginate": "@@paginate"
+            })
         </div>
     </div>
 </div>

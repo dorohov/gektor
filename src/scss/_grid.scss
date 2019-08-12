@@ -50,6 +50,77 @@
     }
 }
 
+.pagination {
+    padding-top: 20px;
+    &__inner {
+        ul {
+            display: flex;
+            align-items: center;
+            li {
+                margin: 0 10px;
+                a {
+                    color: #000;
+                    font-size: 18px;
+                    transition: .25s all ease;
+                    &.is--num {
+                        cursor: pointer;
+                        border-radius: 100%;
+                        &:hover {
+                            background: #BBD3E3;
+                        }
+                    }
+                }
+                .is--num{
+                    font-weight: 300;
+                    display: flex;
+                    align-items: center;
+                    width: 36px;
+                    height: 36px;
+                    justify-content: center;
+                    &.is--current {
+                        background: #BBD3E3;
+                        border-radius: 100%;
+                    }
+                }
+                .is--next {
+                    margin-left: 30px;
+                    &:hover {
+                        color: $c-primary;
+                    }
+                    svg {
+                        fill: $c-primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.breadcrumbs {
+    margin-bottom: 60px;
+    ul {
+        display: flex;
+        li {
+            font-size: 14px;
+            padding-right: 5px;
+            color: #000;
+            font-weight: normal;
+            a { 
+                font-weight: 300;
+                color: #000;
+                white-space: nowrap;
+                &::after {
+                    content: ' ... ';
+                    color: #000 !important;
+                }
+                &:hover {
+                    color: $c-primary;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .button {
         padding: 16px 40px;
@@ -62,5 +133,27 @@
         &__sub {
             font-size: 16px;
         }
+    }
+    .pagination {
+        &__inner {
+            ul {
+                li {
+                    margin: 0 5px;
+                    &:last-child {
+                        display: none;
+                    }
+                    * {
+                        font-size: 14px !important;
+                    }
+                    .is--num {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+    }
+    .breadcrumbs {
+        display: none;
     }
 }

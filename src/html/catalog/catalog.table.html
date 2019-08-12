@@ -1,0 +1,57 @@
+<div class="catalog-banner">
+    <div class="catalog-banner__inner container">
+        <div class="catalog-banner__top">
+            <div class="catalog-banner__top__left">
+                @@include('../simple/simple.breadcrumbs.html', {
+                    "list": [
+                        {
+                            "title": "Главная",
+                            "url": "@@pages.index"
+                        }
+                    ],
+                    "current": "Каталог"
+                })
+                <div class="heading">
+                    <div class="heading__text">Каталог продукции</div>
+                </div>
+            </div>
+            <div class="catalog-banner__top__right">
+                <form class="catalog-banner__top__search">
+                    <input type="text" placeholder="Поиск по магазину">
+                    <button type="submit">
+                        @@include('../components/component.svg.html', {"name": "search"})
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="catalog-banner__filters">
+            <div class="catalog-banner__filters__heading">Выберите необходимые параметры</div>
+            <div class="catalog-banner__filters__list">
+                @@include('catalog.table.filter.block.html', {
+                    "id": 1,
+                    "title": "Диаметр, мм",
+                    "min": 1,
+                    "max": 530
+                })
+                @@include('catalog.table.filter.block.html', {
+                    "id": 2,
+                    "title": "Внутренний диаметр, мм",
+                    "min": 1,
+                    "max": 530
+                })
+                @@include('catalog.table.filter.block.html', {
+                    "id": 3,
+                    "title": "Наружный диаметр, мм",
+                    "min": 2,
+                    "max": 580
+                })
+                @@include('catalog.table.filter.block.html', {
+                    "id": 4,
+                    "title": "Номер",
+                    "min": 2,
+                    "max": 580
+                })
+            </div>
+        </div>
+    </div>
+</div>
