@@ -1,34 +1,55 @@
 <header class="navbar">
     <div class="navbar__inner container">
-        <div class="navbar__logo">
-            <a href="@@pages.index">
-                <img src="img/logo.png" alt="@@sitename">
-            </a>
+        <div class="navbar__left">
+            <div class="navbar__logo">
+                <a href="@@pages.index">
+                    <img src="img/logo.svg" alt="@@sitename">
+                </a>
+            </div>
+            <div class="navbar__menu">
+                <ul>
+                    <li><a href="@@pages.catalog"><span>Каталог</span></a></li>
+                    <li><a href="@@pages.delivery"><span>Доставка и оплата</span></a></li>
+                    <li><a href="@@pages.contacts"><span>Контакты</span></a></li>
+                </ul>
+            </div>
         </div>
-        <div class="navbar__menu">
-            <ul>
-                <li class="is--active"><a href="@@pages.index"><span>Главная</span></a></li>
-                <li><a href="@@pages.catalog"><span>Каталог</span></a></li>
-                <li><a href="@@pages.delivery"><span>Доставка и оплата</span></a></li>
-                <li><a href="@@pages.contacts"><span>Контакты</span></a></li>
-            </ul>
-        </div>
-        <div class="navbar__phone">
-            <a href="@@phone_link" class="navbar__phone__inner">
-                @@include('component.svg.html', {"name": "phone"})
-                <span>@@phone</span>
-            </a>
-        </div>
-        <div class="navbar__search">
-            <form action="#" class="navbar__search__inner">
-                <input type="text" name="search" id="search" class="is--search is--default" placeholder="Поиск">
-            </form>
-        </div>
-        <div class="navbar__basket">
-            <a href="@@pages.basket">
-                @@include('component.svg.html', {"name": "cart"})
-                <span class="is--num">13</span>
-            </a>
+        <div class="navbar__right">
+            <div class="navbar__email is--so_cls">
+                <a href="mailto:@@email" class="navbar__email__inner">
+                    @@include('component.svg.html', {"name": "mail"})
+                    <span>@@email</span>
+                </a>
+            </div>
+            <div class="navbar__phone is--so_cls">
+                <a href="@@phone_link" class="navbar__phone__inner">
+                    @@include('component.svg.html', {"name": "phone"})
+                    <span>@@phone</span>
+                </a>
+            </div>
+            <div class="navbar__phone is--so_cls">
+                <a href="@@phone_link" class="navbar__phone__inner">
+                    @@include('component.svg.html', {"name": "phone"})
+                    <span>@@phone</span>
+                </a>
+            </div>
+            <div class="navbar__basket is--so_cls">
+                <a href="@@pages.basket">
+                    @@include('component.svg.html', {"name": "cart"})
+                    <span class="is--num">13</span>
+                </a>
+            </div>
+            <div class="navbar__search is--so_cls">
+                <span class="is--nlink">
+                    @@include('component.svg.html', {"name": "search"})
+                </span>
+            </div>
+            <div class="navbar__searchbar">
+                <input type="text" name="nsearch" id="nsearch">
+                <button type="submit">
+                    @@include('component.svg.html', {"name": "search"})
+                </button>
+            </div>
         </div>
         <div class="navbar__mobile">
             <button class="hamburger hamburger--collapse" type="button">
@@ -62,6 +83,18 @@
                 <a href="@@phone_link" class="navbar__phone__inner">
                     @@include('component.svg.html', {"name": "phone"})
                     <span>@@phone</span>
+                </a>
+            </div>
+            <div class="navbar__phone">
+                <a href="@@phone_link" class="navbar__phone__inner">
+                    @@include('component.svg.html', {"name": "phone"})
+                    <span>@@phone</span>
+                </a>
+            </div>
+            <div class="navbar__email is--so_cls">
+                <a href="mailto:@@email" class="navbar__email__inner">
+                    @@include('component.svg.html', {"name": "mail"})
+                    <span>@@email</span>
                 </a>
             </div>
         </div>

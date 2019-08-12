@@ -12,13 +12,27 @@
         display: flex;
         align-items: center;
     }
+    &__left,
+    &__right {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    &__right {
+        position: relative;
+        overflow: hidden;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+        margin-left: auto;
+    }
     &__logo {
         max-width: 121px;
         width: 100%;
-        margin-right: 55px;
+        margin-right: 25px;
     }
     &__menu {
         height: 100%;
+        margin-right: auto;
         ul {
             display: flex;
             height: 100%;
@@ -36,6 +50,7 @@
                         position: relative;
                         color: #000000;
                         white-space: nowrap;
+                        font-size: 18px;
                         &::after {
                             content: '';
                             background: $c-primary;
@@ -61,9 +76,10 @@
             }
         }
     }
-    &__phone {
+    &__phone,
+    &__email {
         height: 100%;
-        margin-left: auto;
+        margin-left: 30px;
         a {
             display: flex;
             align-items: center;
@@ -76,6 +92,7 @@
                 display: inline-block;
                 margin-left: 8px;
                 padding-bottom: 5px;
+                font-size: 14px;
             }
             svg {
                 fill: $c-primary;
@@ -87,22 +104,11 @@
             }
         }
     }
+    &__basket,
     &__search {
-        margin-left: 65px;
-        &__inner {
-            position: relative;
-            &::after {
-                content: url(../../img/search.svg);
-                position: absolute;
-                left: 22px;
-                top: 50%;
-                margin-top: -10px;
-            }
-        }
-    }
-    &__basket {
         margin-left: 45px;
-        a {
+        a,
+        span.is--nlink {
             display: flex;
             width: 45px;
             height: 45px;
@@ -110,8 +116,9 @@
             align-items: center;
             justify-content: center;
             border-radius: 100%;
-            transition: .25s all ease;
+            transition: .5s all ease;
             position: relative;
+            cursor: pointer;
             svg {
                 fill: #fff;
                 transition: .25s all ease;
@@ -138,6 +145,45 @@
                 background: #BBD3E3;
                 svg {
                     fill: $c-primary;
+                }
+            }
+        }
+    }
+    &__search {
+        margin-left: 20px;
+        position: relative;
+        &bar {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -23px;
+            width: 100%;
+            transform: translateX(100%);
+            transition: .25s all ease;
+            &.is--open {
+                transform: translateX(0);
+            }
+            input[type="text"] {
+                height: 45px;
+                border: none;
+                border-radius: 30px;
+                background: $c-primary;
+                width: 100%;
+                color: #fff;
+                padding: 0 40px 0 55px;
+            }
+            button {
+                position: absolute;
+                padding: 0;
+                border: none;
+                background: transparent;
+                cursor: pointer;
+                outline: none;
+                left: 20px;
+                top: 50%;
+                margin-top: -10px;
+                svg {
+                    fill: #fff;
                 }
             }
         }
@@ -210,8 +256,29 @@
             }
             &__phone {
                 padding: 0 20px;
-                .navbar__phone {
+                .navbar__phone,
+                .navbar__email {
                     display: block !important;
+                    margin-left: 0 !important;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1600px) {
+    .navbar {
+        &__menu {
+            ul {
+                li {
+                    a {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        span {
+                            font-size: 16px;
+                        }
+                    }
                 }
             }
         }
@@ -221,7 +288,7 @@
 @media (max-width: 1440px) {
     .navbar {
         &__logo {
-            margin-right: 25px;
+            margin-right: 10px;
         }
         &__menu {
             ul {
@@ -234,7 +301,7 @@
             }
         }
         &__search {
-            margin-left: 35px;
+            margin-left: 15px;
         }
         &__basket {
             margin-left: 25px;
@@ -242,11 +309,12 @@
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1360px) {
     .navbar {
         height: 70px;
         &__menu,
         &__phone,
+        &__email,
         &__search,
         &__basket {
             display: none;

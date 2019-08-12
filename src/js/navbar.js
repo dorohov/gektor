@@ -9,14 +9,17 @@
             body: 'body',
             filtersBtn: '.catalog-home__title__all.is--filters .catalog-home__title__all__text',
             filtersWrap: '.catalog-home__aside',
-            filtersClose: '.catalog-home__aside__close a'
+            filtersClose: '.catalog-home__aside__close a',
+            searchPanelBtn: '.navbar__search span',
+            searchPanel: '.navbar__searchbar'
         }
 
         var __clases = {
             openMenu: 'is--open-menu',
             openOverlay: 'is--overlay',
             openMenuBtn: 'is-active',
-            openFilters: 'is--filters'
+            openFilters: 'is--filters',
+            open: 'is--open'
         }
 
         function toggleNavbar() {
@@ -65,6 +68,23 @@
             $(__items.body).removeClass(__clases.openOverlay)
         }
 
+        function openSearchPanel() {
+            $(__items.searchPanel).addClass(__clases.open)
+            $('.is--so_cls').css({
+                opacity: 0
+            })
+        }
+
+        function closeSearchPanel(e) {
+            var targets = $(e.target).closest('.navbar__right')
+            if(targets.length <= 0) {
+                $(__items.searchPanel).removeClass(__clases.open)
+                $('.is--so_cls').css({
+                    opacity: 1
+                })
+            }
+        }
+
         setBodyPadding()
 
         function closeAll() {
@@ -94,6 +114,14 @@
 
         $(__items.filtersClose).on('click', function() {
             closeFilters()
+        })
+
+        $(__items.searchPanelBtn).on('click', function() {
+            openSearchPanel()
+        })
+
+        $(document).on('click', function(e) {
+            closeSearchPanel(e)
         })
         
         $(window).resize(function() {
