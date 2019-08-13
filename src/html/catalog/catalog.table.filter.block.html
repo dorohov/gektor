@@ -3,11 +3,23 @@
         <div class="catalog-banner__filters__block__input">
             <div class="catalog-banner__filters__block__input__title">@@title</div>
             <div class="catalog-banner__filters__block__input__field">
-                <input type="number" placeholder="от @@min до @@max" min="@@min" max="@@max" data-id="@@id">
+                <input 
+                type="number" 
+                placeholder="от @@min до @@max" 
+                min="@@min" 
+                max="@@max" 
+                data-id="@@id" 
+                class="cf-field"
+                id="cf-field_@@id"
+                >
             </div>
         </div>
         <div class="catalog-banner__filters__block__slider">
             <div class="slider" data-id="@@id"></div>
+        </div>
+        <div class="catalog-banner__filters__block__footer">
+            <span class="is--left">@@min</span>
+            <span class="is--right">@@max</span>
         </div>
     </div>
 </div>

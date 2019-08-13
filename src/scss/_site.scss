@@ -237,6 +237,7 @@
                 font-size: 14px;
                 color: #000;
                 transition: .25s all ease;
+                width: 100%;
                 &:focus {
                     border-color: $c-primary;
                 }
@@ -340,8 +341,112 @@
                     }
                 }
             }
+            &__footer {
+                display: flex;
+                span {
+                    display: block;
+                    max-width: 50%;
+                    width: 100%;
+                    font-weight: 300;
+                    font-size: 12px;
+                    &.is--right {
+                        text-align: right;
+                    }
+                }
+            }
         }
     }
+    &__table {
+        margin-bottom: 65px;
+    }
+}
+
+.delivery {
+    padding: 55px 0 65px 0;
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -30px 20px -30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        img {
+            width: auto;
+            max-width: 100%;
+        }
+    }
+    &__block {
+        padding: 0 30px;
+        width: 100%;
+        margin-bottom: 35px;
+        &.is--c3 {
+            max-width: 33.333333%;
+        }
+        &.is--c2 {
+            max-width: 50%;
+        }
+        &.is--c1-3 {
+            max-width: 33.33333%;
+        }
+        &.is--c2-3 {
+            max-width: 66.66666%;
+        }
+        &.is--nh {
+            padding-top: 27px;
+        }
+        p {
+            margin: 0 0 20px 0;
+            font-weight: 300;
+            font-size: 14px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &__heading {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    }
+    &__heading {
+        margin-bottom: 35px;
+        font-weight: 500;
+        font-size: 24px;
+    }
+}
+
+.contacts {
+    padding: 55px 0;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        &__block {
+            max-width: 33.33333%;
+            width: 100%;
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            a,
+            span {
+                font-weight: 600;
+                font-size: 16px;
+                color: #000;
+            }
+            a {
+                transition: .25s all ease;
+                &:hover {
+                    color: $c-primary;
+                }
+            }
+            svg {
+                fill: $c-primary;
+            }
+        }
+    }
+}
+
+#map {
+    height: 570px;
 }
 
 @media (max-width: 1440px) {
@@ -425,6 +530,23 @@
             }
         }
     }
+    .delivery {
+        &__block {
+            &.is--c3 {
+                max-width: 50%;
+                &:last-child {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    .contacts {
+        &__list {
+            &__block {
+                max-width: 100%;
+            }
+        }
+    }
 }
 
 @media (max-width: 1025px) {
@@ -433,6 +555,11 @@
             &__card {
                 max-width: 50%;
             }
+        }
+    }
+    .delivery {
+        &__block {
+            max-width: 100% !important;
         }
     }
 }
@@ -505,6 +632,7 @@
             }
         }
         &__filters {
+            margin-bottom: 20px;
             &__heading {
                 font-size: 18px;
                 margin-bottom: 20px;
@@ -513,5 +641,36 @@
                 max-width: 100%;
             }
         }
+        &__table {
+            margin-bottom: 25px;
+        }
+    }
+    .delivery {
+        &__heading {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        &__block {
+            margin-bottom: 25px;
+            &.is--nh {
+                padding-top: 0;
+            }
+            img {
+                max-width: 60%;
+            }
+        }
+    }
+    .contacts {
+        &__list {
+            &__block {
+                margin-bottom: 30px;
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    #map {
+        height: 300px;
     }
 }

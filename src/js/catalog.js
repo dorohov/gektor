@@ -39,6 +39,13 @@
                         $('.catalog-banner__filters__block__input__field input[data-id="' + $(this).data('id') + '"]').val(ui.value)
                     }
                 });
+
+            IMask(document.getElementById('cf-field_' + (i + 1)), {
+                mask: Number,
+                min: thisMin,
+                max: thisMax,
+                thousandsSeparator: ' '
+            })
         }
 
         function inputOnChange(item) {

@@ -1,0 +1,31 @@
+<div class="contacts">
+    <div class="contacts__inner container">
+        @@include('../simple/simple.breadcrumbs.html', {
+            "list": [
+                {
+                    "title": "Главная",
+                    "url": "@@pages.index"
+                }
+            ],
+            "current": "Доставка и оплата"
+        })
+        <div class="heading">
+            <div class="heading__text">Доставка и оплата</div>
+        </div>
+        <div class="contacts__list">
+            <div class="contacts__list__block">
+                @@include('../components/component.svg.html', {"name": "c_phone"})
+                <a href="tel:74862360175">+7 (4862) 36-01-75</a>
+            </div>
+            <div class="contacts__list__block">
+                @@include('../components/component.svg.html', {"name": "c_mail"})
+                <a href="mailto:@@email">@@email</a>
+            </div>
+            <div class="contacts__list__block">
+                @@include('../components/component.svg.html', {"name": "c_marker"})
+                <span>г.Орел ул. Рощинская д.41 пом. 5</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="map"></div>

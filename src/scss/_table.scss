@@ -1,0 +1,88 @@
+.table {
+    table {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+        border-collapse: collapse;
+        thead {
+            background: $c-primary;
+            color: #fff;
+            tr {
+                th {
+                    font-weight: normal;
+                    padding: 30px 45px;
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    padding: 20px 45px;
+                    color: #1E201D;
+                    button {
+                        padding: 0;
+                        border: 0;
+                        background: transparent;
+                        cursor: pointer;
+                        svg {
+                            fill: $c-primary;
+                            transition: .25s all ease;
+                        }
+                        &:hover {
+                            svg {
+                                fill: #000;
+                            }
+                        }
+                    }
+                }
+                &:nth-child(odd) {
+                    td {
+                        background: #DEE8EF;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .table {
+        table tr th,
+        tbody tr td {
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+        }
+    }
+}
+
+@media (max-width: 1025px) {
+    .table {
+        table {
+            thead {
+                display: none;
+            }
+            tbody {
+                tr,
+                tr td {
+                    display: block;
+                    text-align: left;
+                }
+                tr {
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    td {
+                        position: relative;
+                        padding-top: 15px;
+                        padding-bottom: 15px;
+                        &::before {
+                            content: attr(data-text);
+                            font-weight: 500;
+                            display: block;
+                            margin-bottom: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
