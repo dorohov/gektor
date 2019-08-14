@@ -1,0 +1,19 @@
+<div class="search">
+    <div class="search__inner container">
+        @@include('../simple/simple.breadcrumbs.html', {
+            "list": [
+                {
+                    "title": "Главная",
+                    "url": "@@pages.index"
+                }
+            ],
+            "current": "Поиск"
+        })
+        <div class="heading">
+            <div class="heading__text">Результаты поиска</div>
+            <div class="heading__sub is--xs">Найдено: 236 позиции</div>
+        </div>
+        @@include('../simple/simple.table.html')
+        @@include('../simple/simple.pagination.html')
+    </div>
+</div>

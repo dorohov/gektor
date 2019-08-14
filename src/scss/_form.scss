@@ -112,6 +112,28 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0; 
 }
 
+.counter {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid $c-primary;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 50px;
+    input {
+        max-width: 50px;
+        text-align: center;
+        border: none;
+        font-weight: 600;
+        font-size: 24px;
+    }
+    button {
+        padding: 0;
+        border: none;
+        cursor: pointer;
+        background: transparent;
+    }
+}
+
 @media (max-width: 1440px) {
     input {
         &[type="text"],

@@ -16,6 +16,15 @@
     text-transform: uppercase;
     padding: 20px 70px;
     white-space: nowrap;
+    &.is--xs {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    &.is--inverse {
+        color: $c-primary;
+        border: 1px solid #BBD3E3;
+        background: transparent;
+    }
     &__text {
         height: 14px;
         overflow: hidden;
@@ -47,6 +56,10 @@
     &__sub {
         padding-top: 30px;
         font-size: 18px;
+        &.is--xs {
+            padding-top: 20px;
+            font-size: 14px;
+        }
     }
 }
 

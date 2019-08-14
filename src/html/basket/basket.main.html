@@ -1,0 +1,35 @@
+<div class="basket">
+    <div class="basket__inner container">
+        @@include('../simple/simple.breadcrumbs.html', {
+            "list": [
+                {
+                    "title": "Главная",
+                    "url": "@@pages.index"
+                }
+            ],
+            "current": "Корзина"
+        })
+        <div class="heading">
+            <div class="heading__text">Корзина</div>
+        </div>
+        @@include('basket.table.html')
+        <div class="basket__footer">
+            <div class="basket__footer__left">
+                <a href="" class="button is--xs is--inverse">
+                    <div class="button__text is--default">
+                        <span class="button__text is--one">Оформить заказ</span>
+                        <span class="button__text is--one">Оформить заказ</span>
+                    </div>
+                </a>
+            </div>
+            <div class="basket__footer__right">
+                <a href="" class="button is--xs">
+                    <div class="button__text is--default">
+                        <span class="button__text is--one">Очистить корзину</span>
+                        <span class="button__text is--one">Очистить корзину</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

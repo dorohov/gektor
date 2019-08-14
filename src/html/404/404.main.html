@@ -1,0 +1,23 @@
+<div class="error">
+    <div class="error__inner container">
+        <div class="error__wrap">
+            <div class="error__wrap__img">
+                <img src="img/404.svg" alt="Страница не найдена">
+            </div>
+            <div class="error__wrap__heading">
+                <div class="error__wrap__heading__text">Страница не найдена!</div>
+                <div class="error__wrap__heading__sub">
+                    Данная страница не найдена <br> 
+                    или никогда не существовала. </div>
+            </div>
+            <div class="error__wrap__btn">
+                @@include('../components/component.button.html', {
+                    "text": "На главную",
+                    "type": "link",
+                    "url": "@@pages.catalog",
+                    "style": "default"
+                })
+            </div>
+        </div>
+    </div>
+</div>
