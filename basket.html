@@ -325,14 +325,59 @@
         </div>
     </div>
     <div id="overlay"></div>
-
-
+    <div id="modal-form" class="modal is--lg">
+        <div class="modal__inner">
+            <div class="modal__heading">
+                <div class="modal__heading__text">Заполните форму</div>
+            </div>
+            <form class="modal__form">
+                <div class="modal__form__block">
+                    <div class="form__block">
+                        <input type="text" class="is--default is--icon-right is--name" id="moadl_name" name="moadl_name" placeholder="Ваше имя" required>
+                        <label for="quest"><svg class="svg-field_user-dims svg is--field_user">
+                                <use xlink:href="img/svg/sprites.svg#field_user"></use>
+                            </svg></label>
+                    </div>
+                    <div class="form__block">
+                        <input type="text" class="is--default is--icon-right is--phone" id="moadl_phone" name="moadl_phone" placeholder="Ваш телефон" required>
+                        <label for="quest"><svg class="svg-field_phone-dims svg is--field_phone">
+                                <use xlink:href="img/svg/sprites.svg#field_phone"></use>
+                            </svg></label>
+                    </div>
+                    <div class="form__block">
+                        <input type="text" class="is--default is--icon-right is--quest" id="moadl_quest" name="moadl_quest" placeholder="Ваш вопрос" required>
+                        <label for="quest"><svg class="svg-field_quest-dims svg is--field_quest">
+                                <use xlink:href="img/svg/sprites.svg#field_quest"></use>
+                            </svg></label>
+                    </div>
+                </div>
+                <button class="button" type="submit">
+                    <div class="button__text is--default">
+                        <span class="button__text is--one">Отправить</span>
+                        <span class="button__text is--one">Отправить</span>
+                    </div>
+                </button>
+            </form>
+        </div>
+    </div>
+    <div id="modal-success" class="modal is--xs">
+        <div class="modal__inner">
+            <div class="modal__heading">
+                <div class="modal__heading__text">Ваше сообщение <br> отправлено!</div>
+                <div class="modal__heading__sub">В ближайшее время с Вами свяжется специалист</div>
+            </div>
+            <a href="#" class="button" rel="modal:close">
+                <div class="button__text is--default">
+                    <span class="button__text is--one">Закрыть</span>
+                    <span class="button__text is--one">Закрыть</span>
+                </div>
+            </a>
+        </div>
+    </div>
     <script src="dist/js/jquery-3.3.1.min.js"></script>
     <script src="dist/js/jquery-ui.min.js"></script>
-    <script src="dist/js/imask.js"></script>
-    <script src="dist/js/jquery.modal.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=fd060bca-cc26-4e52-8dc1-0decaa8cc2ff&lang=ru_RU" type="text/javascript"></script>
-    <script src="dist/js/main.js"></script>
+    <script src="dist/js/bundle-min.js"></script>
 </body>
 
 </html>

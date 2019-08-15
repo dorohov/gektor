@@ -10,15 +10,15 @@
         </div>
         <div class="form__wrap">
             <div class="form__block">
-                <input type="text" class="is--default is--icon-right is--user" id="name" name="name" placeholder="Ваше имя">
+                <input type="text" class="is--default is--icon-right is--user" id="name" name="name" placeholder="Ваше имя" required>
                 <label for="name">@@include('../components/component.svg.html', {"name": "field_user"})</label>
             </div>
             <div class="form__block">
-                <input type="text" class="is--default is--icon-right is--phone" id="phone" name="phone" placeholder="Ваш телефон">
+                <input type="text" class="is--default is--icon-right is--phone" id="phone" name="phone" placeholder="Ваш телефон" required>
                 <label for="phone">@@include('../components/component.svg.html', {"name": "field_phone"})</label>
             </div>
             <div class="form__block">
-                <input type="text" class="is--default is--icon-right is--quest" id="quest" name="quest" placeholder="Ваш вопрос">
+                <input type="text" class="is--default is--icon-right is--quest" id="quest" name="quest" placeholder="Ваш вопрос" required>
                 <label for="quest">@@include('../components/component.svg.html', {"name": "field_quest"})</label>
             </div>
             <div class="form__block">
@@ -31,7 +31,7 @@
         </div>
         <div class="form__ruls">
             <div class="checkbox">
-                <input type="checkbox" name="ruls" id="ruls">
+                <input type="checkbox" name="ruls" id="ruls" required>
                 <label for="ruls"><span></span></label>
             </div>
             <label for="ruls">

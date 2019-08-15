@@ -1,0 +1,29 @@
+<div id="modal-form" class="modal is--lg">
+    <div class="modal__inner">
+        <div class="modal__heading">
+            <div class="modal__heading__text">Заполните форму</div>
+        </div>
+        <form class="modal__form">
+            <div class="modal__form__block">
+                <div class="form__block">
+                    <input type="text" class="is--default is--icon-right is--name" id="moadl_name" name="moadl_name" placeholder="Ваше имя" required>
+                    <label for="quest">@@include('../components/component.svg.html', {"name": "field_user"})</label>
+                </div>
+                <div class="form__block">
+                    <input type="text" class="is--default is--icon-right is--phone" id="moadl_phone" name="moadl_phone" placeholder="Ваш телефон" required>
+                    <label for="quest">@@include('../components/component.svg.html', {"name": "field_phone"})</label>
+                </div>
+                <div class="form__block">
+                    <input type="text" class="is--default is--icon-right is--quest" id="moadl_quest" name="moadl_quest" placeholder="Ваш вопрос" required>
+                    <label for="quest">@@include('../components/component.svg.html', {"name": "field_quest"})</label>
+                </div>
+            </div>
+            <button class="button" type="submit">
+                <div class="button__text is--default">
+                    <span class="button__text is--one">Отправить</span>
+                    <span class="button__text is--one">Отправить</span>
+                </div>
+            </button>
+        </form>
+    </div>
+</div>
