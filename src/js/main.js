@@ -34,5 +34,7 @@
             setPaddings()
         })
 
+        svg4everybody()
+
     })
 })(jQuery);

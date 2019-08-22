@@ -227,6 +227,8 @@
         }
         &__right {
             margin-left: auto;
+            max-width: 333px;
+            width: 100%;
         }
         &__search {
             position: relative;
@@ -665,6 +667,11 @@
         &__list {
             &__block {
                 max-width: 100%;
+                display: flex;
+                align-items: center;
+                svg {
+                    margin-right: 15px;
+                }
             }
         }
     }
@@ -793,6 +800,7 @@
             }
             &__right {
                 margin-left: 0;
+                max-width: 100%;
             }
         }
         &__filters {

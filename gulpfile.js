@@ -147,11 +147,12 @@ function createBundleJs() {
     return gulp.src([
                 './dist/js/imask.js',
                 './dist/js/jquery.modal.min.js',
+                './dist/js/svg4everybody.min.js',
                 './dist/js/main.js',
             ])
             .pipe(sourcemaps.init())
             .pipe(concat('bundle.js'))
-            .pipe(minify())
+            // .pipe(minify())
             .pipe(gulp.dest('dist/js'))
             .on('end', browserSync.reload)
 }
