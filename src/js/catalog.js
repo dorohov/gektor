@@ -35,8 +35,11 @@
                     value: thisMin,
                     min: thisMin,
                     max: thisMax,
+                    range: true,
+                    values: [ thisMin, thisMax ],
                     slide: function( event, ui ) {
-                        $('.catalog-banner__filters__block__input__field input[data-id="' + $(this).data('id') + '"]').val(ui.value)
+                        $('.catalog-banner__filters__block__input__field input[data-id="' + $(this).data('id') + '"]').val('от ' + ui.values[ 0 ] + ' до ' + ui.values[ 1 ])
+                        console.log(ui.values[0])
                     }
                 });
 
