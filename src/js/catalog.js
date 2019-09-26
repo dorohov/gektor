@@ -31,7 +31,6 @@
                 thisSlider = $(filtersBlocks[i]).find('.slider')
 
                 $(thisSlider).slider({
-                    range: "min",
                     value: thisMin,
                     min: thisMin,
                     max: thisMax,
