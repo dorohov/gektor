@@ -20,13 +20,7 @@ document.addEventListener('keypress', (event) => {
 
             if(msg != null) {
 
-                $.ajax({
-                    url: 'send.php',
-                    type: 'POST',
-                    data: ''
-                }).done(function(data) {
-
-                })
+                sendError();
 
                 alert('Спасибо!')
             }

@@ -149,6 +149,7 @@ function createBundleJs() {
                 './dist/js/jquery.modal.min.js',
                 './dist/js/svg4everybody.min.js',
                 './dist/js/main.js',
+                './dist/js/jquery.ui.touch-punch.min.js'
             ])
             .pipe(sourcemaps.init())
             .pipe(concat('bundle.js'))
